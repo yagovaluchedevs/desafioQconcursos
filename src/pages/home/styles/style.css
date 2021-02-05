@@ -1,0 +1,90 @@
+@font-face {
+  font-family: roboto-italic;
+  src: url("../../../assets/fonts/Roboto_Mono/static/RobotoMono-ExtraLightItalic.ttf");
+}
+@font-face {
+  font-family: roboto-bold-italic;
+  src: url("../../../assets/fonts/Roboto_Mono/static/RobotoMono-BoldItalic.ttf");
+}
+@font-face {
+  font-family: roboto-semi-bold-italic;
+  src: url("../../../assets/fonts/Roboto_Mono/static/RobotoMono-SemiBold.ttf");
+}
+body {
+  background: url("../../../assets/images/background-page.jpg") no-repeat;
+  background-size: 100% 100vh;
+  color: white;
+}
+body .container-header {
+  display: flex;
+  justify-content: space-between;
+}
+body .container-header .container-name {
+  color: white;
+  width: 305px;
+  height: 120px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-family: roboto-italic;
+}
+body .container-menu {
+  width: 400px;
+  height: 105px;
+  display: flex;
+  align-items: center;
+}
+body .container-menu ul {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style: none;
+  font-family: roboto-bold-italic;
+}
+body .container-menu ul a {
+  text-align: center;
+  height: 30px;
+  width: 70px;
+}
+body .container-menu ul a:hover {
+  cursor: pointer;
+  zoom: 1.1;
+  color: #13c5b6;
+  transition: all 1s ease-in-out;
+}
+body section {
+  width: 100%;
+  display: flex;
+  height: 446px;
+  justify-content: center;
+  align-items: flex-end;
+}
+body section .content-challenge {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.212);
+  width: 700px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body section .content-challenge h1 {
+  font-size: 45px;
+}
+body section .content-challenge h1,
+body section .content-challenge h2 {
+  font-family: roboto-semi-bold-italic;
+  text-align: center;
+}
+body section .content-challenge h2 {
+  font-size: 30px;
+}
+body section .content-challenge h2 a {
+  color: #13c5b6;
+}
+body section .content-challenge h2 a:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
