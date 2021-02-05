@@ -7,4 +7,4 @@ O desafio consiste em uma aplicação que  retorne 1 perfil do gihub, exibindo a
 # Dependências 
 * WebPack
 * Babel 
-* Scss
+* Sass
