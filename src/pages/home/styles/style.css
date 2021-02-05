@@ -10,6 +10,12 @@
   font-family: roboto-semi-bold-italic;
   src: url("../../../assets/fonts/Roboto_Mono/static/RobotoMono-SemiBold.ttf");
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: url("../../../assets/images/background-page3.jpg") no-repeat;
   background-size: cover;
@@ -47,6 +53,7 @@ body .container-header .container-name {
 body .container-header .container-name h1:hover {
   color: #13c5b6;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 body .container-menu {
   width: 400px;
@@ -137,9 +144,22 @@ body section .content-challenge h2 {
 }
 body section .content-challenge h2 a {
   color: #13c5b6;
+  text-decoration: none;
 }
 body section .content-challenge h2 a:hover {
   cursor: pointer;
+}
+body .social-network-container {
+  display: flex;
+  justify-content: center;
+}
+body .social-network-container div {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+body .social-network-container div img {
+  width: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
