@@ -11,41 +11,50 @@
   font-family: roboto-semi-bold-italic;
   src: url("../../../assets/fonts/Roboto_Mono/static/RobotoMono-SemiBold.ttf");
 }
+$color-hover: rgb(19, 197, 182);
+$cursor-hover: pointer;
+$positionX-center: center;
+$screen-flexible: flex;
+$positioning-at-the-end: flex-end;
 body {
-  background: url("../../../assets/images/background-page.jpg") no-repeat;
+  background: url("../../../assets/images/background-page3.jpg") no-repeat;
   background-size: cover;
   color: white;
 
   .container-header {
-    display: flex;
+    display: $screen-flexible;
     justify-content: space-between;
     @media Screen and (min-width: 280px) and (max-width: 580px) {
       flex-direction: column;
     }
     @media Screen and (min-width: 540px) and (max-width: 540px) {
       flex-direction: column;
-      align-items: center;
+      align-items: $positionX-center;
     }
     .container-name {
       color: white;
       width: 305px;
       height: 120px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
+      display: $screen-flexible;
+      justify-content: $positioning-at-the-end;
+      align-items: $positioning-at-the-end;
       font-family: roboto-italic;
       @media Screen and (min-width: 540px) and (max-width: 540px) {
-        justify-content: center;
+        justify-content: $positionX-center;
+      }
+      h1:hover {
+        color: $color-hover;
+        cursor: $cursor-hover;
       }
     }
   }
   .container-menu {
     width: 400px;
     height: 105px;
-    display: flex;
-    align-items: center;
+    display: $screen-flexible;
+    align-items: $positionX-center;
     @media Screen and (min-width: 350px) and (max-width: 420px) {
-      align-self: center;
+      align-self: $positionX-center;
       font-size: 20px;
     }
     @media Screen and (min-width: 768px) and (max-width: 768px) {
@@ -54,30 +63,30 @@ body {
 
     ul {
       width: 300px;
-      display: flex;
+      display: $screen-flexible;
       justify-content: space-between;
       text-decoration: none;
       list-style: none;
       font-family: roboto-bold-italic;
       a {
-        text-align: center;
+        text-align: $positionX-center;
         height: 30px;
         width: 70px;
       }
       a:hover {
-        cursor: pointer;
+        cursor: $cursor-hover;
         zoom: 1.1;
-        color: rgb(19, 197, 182);
-        transition: all 1s ease-in-out;
+        color: $color-hover;
+        transition: all 0.5s ease-in-out;
       }
     }
   }
   section {
     width: 100%;
-    display: flex;
+    display: $screen-flexible;
     height: 446px;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: $positionX-center;
+    align-items: $positioning-at-the-end;
     @media Screen and (min-width: 320px) and (max-width: 320px) {
       width: 130%;
     }
@@ -90,12 +99,12 @@ body {
 
     .content-challenge {
       border-radius: 5px;
-      background-color: rgba(0, 0, 0, 0.212);
+      background-color: rgba(44, 44, 44, 0.205);
       width: 700px;
       height: 400px;
-      display: flex;
+      display: $screen-flexible;
+      justify-content: $positionX-center;
       flex-direction: column;
-      justify-content: center;
       @media Screen and (min-width: 350px) and (max-width: 420px) {
         height: 288px;
         justify-content: flex-start;
@@ -109,15 +118,15 @@ body {
       h1,
       h2 {
         font-family: roboto-semi-bold-italic;
-        text-align: center;
+        text-align: $positionX-center;
       }
       h2 {
         font-size: 30px;
         a {
-          color: rgb(19, 197, 182);
+          color: $color-hover;
         }
         a:hover {
-          cursor: pointer;
+          cursor: $cursor-hover;
         }
       }
     }

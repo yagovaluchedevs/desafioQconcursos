@@ -11,7 +11,7 @@
   src: url("../../../assets/fonts/Roboto_Mono/static/RobotoMono-SemiBold.ttf");
 }
 body {
-  background: url("../../../assets/images/background-page.jpg") no-repeat;
+  background: url("../../../assets/images/background-page3.jpg") no-repeat;
   background-size: cover;
   color: white;
 }
@@ -43,6 +43,10 @@ body .container-header .container-name {
   body .container-header .container-name {
     justify-content: center;
   }
+}
+body .container-header .container-name h1:hover {
+  color: #13c5b6;
+  cursor: pointer;
 }
 body .container-menu {
   width: 400px;
@@ -78,7 +82,7 @@ body .container-menu ul a:hover {
   cursor: pointer;
   zoom: 1.1;
   color: #13c5b6;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 body section {
   width: 100%;
@@ -104,12 +108,12 @@ body section {
 }
 body section .content-challenge {
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.212);
+  background-color: rgba(44, 44, 44, 0.205);
   width: 700px;
   height: 400px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
 }
 @media Screen and (min-width: 350px) and (max-width: 420px) {
   body section .content-challenge {
