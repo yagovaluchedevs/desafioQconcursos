@@ -23,6 +23,10 @@ body {
       justify-content: $positioning-at-the-end;
       align-items: $positioning-at-the-end;
       font-family: roboto-italic;
+      @media Screen and (min-width: 350px) and (max-width: 420px) {
+        width: 100%;
+        justify-content: $position-center;
+      }
       @media Screen and (min-width: 540px) and (max-width: 540px) {
         justify-content: $position-center;
       }
@@ -39,8 +43,18 @@ body {
     display: $screen-flexible;
     align-items: $position-center;
     @media Screen and (min-width: 350px) and (max-width: 420px) {
-      align-self: $position-center;
+      width: 100%;
+      justify-content: $position-center;
       font-size: 20px;
+    }
+    @media Screen and (max-width: 320px) {
+      justify-content: $position-center;
+    }
+    @media Screen and (min-width: 540px) and (max-width: 540px) {
+      justify-content: $position-center;
+      li {
+        font-size: 22px;
+      }
     }
     @media Screen and (min-width: 768px) and (max-width: 768px) {
       font-size: 25px;
@@ -90,15 +104,16 @@ body {
       display: $screen-flexible;
       justify-content: $position-center;
       flex-direction: column;
-      @media Screen and (min-width: 350px) and (max-width: 420px) {
-        height: 288px;
-        justify-content: flex-start;
+      @media Screen and (min-width: 350px) and (max-width: 400px) {
         h1 {
-          font-size: 35px !important;
+          font-size: 35px;
         }
       }
       h1 {
         font-size: 45px;
+        @media Screen and (min-width: 280px) and (max-width: 540px) {
+          margin-bottom: 96px;
+        }
       }
       h1,
       h2 {
@@ -121,7 +136,7 @@ body {
     display: $screen-flexible;
     justify-content: $position-center;
     div {
-      width: 100px;
+      width: 200px;
       display: $screen-flexible;
       justify-content: space-between;
       img {
