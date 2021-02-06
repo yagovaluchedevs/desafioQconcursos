@@ -1,0 +1,62 @@
+@font-face {
+  font-family: roboto-italic;
+  src: url("../../../assets/fonts/Roboto_Mono/static/RobotoMono-ExtraLightItalic.ttf");
+}
+@font-face {
+  font-family: roboto-bold-italic;
+  src: url("../../../assets/fonts/Roboto_Mono/static/RobotoMono-BoldItalic.ttf");
+}
+@font-face {
+  font-family: roboto-semi-bold-italic;
+  src: url("../../../assets/fonts/Roboto_Mono/static/RobotoMono-SemiBold.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: roboto-italic;
+  text-align: center;
+}
+.about-me h1 {
+  color: #13c5b6;
+  font-family: roboto-bold-italic;
+  margin: 10px 0 15px 0;
+}
+.about-me .content-block {
+  width: 600px;
+  display: flex;
+  align-items: center;
+}
+@media Screen and (max-width: 600px) {
+  .about-me .content-block {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+.about-me .content-block p:hover {
+  color: #13c5b6;
+}
+.about-me .image {
+  border-radius: 100px;
+  width: 155px;
+  height: 155px;
+  object-fit: fill;
+}
+@media screen and (max-width: 600px) {
+  .about-me .image {
+    margin-top: 10px;
+  }
+}
+@media Screen and (max-width: 600px) {
+  .about-me .secondary {
+    flex-direction: column-reverse;
+  }
+}
+
+/*# sourceMappingURL=sobre.style.css.map */

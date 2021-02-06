@@ -1,0 +1,39 @@
+@import "../../../components/styles/reset.styles.scss";
+.about-me {
+  display: $screen-flexible;
+  flex-direction: column;
+  align-items: $position-center;
+  font-family: roboto-italic;
+  text-align: $position-center;
+  h1 {
+    color: $color-hover;
+    font-family: roboto-bold-italic;
+    margin: 10px 0 15px 0;
+  }
+  .content-block {
+    width: 600px;
+    display: $screen-flexible;
+    align-items: $position-center;
+    @media Screen and (max-width: 600px) {
+      width: 100%;
+      flex-direction: column;
+    }
+    p:hover {
+      color: $color-hover;
+    }
+  }
+  .image {
+    border-radius: 100px;
+    width: 155px;
+    height: 155px;
+    object-fit: fill;
+    @media screen and (max-width: 600px) {
+      margin-top: 10px;
+    }
+  }
+  .secondary {
+    @media Screen and (max-width: 600px) {
+      flex-direction: column-reverse;
+    }
+  }
+}
