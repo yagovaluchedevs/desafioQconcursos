@@ -107,7 +107,6 @@ body .container-menu ul a {
 }
 body .container-menu ul a:hover {
   cursor: pointer;
-  zoom: 1.1;
   color: #13c5b6;
   transition: all 0.5s ease-in-out;
 }
@@ -183,4 +182,4 @@ body .social-network-container div img {
   width: 60px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=home.styles.css.map */

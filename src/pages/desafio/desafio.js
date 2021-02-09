@@ -1,3 +1,3 @@
-import { gettingDataFromApi } from "../../components/cardProfile/cardProfile";
+import { cardProfile } from "../../components/cardProfile";
 
-gettingDataFromApi();
+cardProfile();

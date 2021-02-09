@@ -305,14 +305,25 @@ eval("\n\nvar bind = __webpack_require__(/*! ./helpers/bind */ \"./node_modules/
 
 /***/ }),
 
-/***/ "./src/components/cardProfile/cardProfile.js":
-/*!***************************************************!*\
-  !*** ./src/components/cardProfile/cardProfile.js ***!
-  \***************************************************/
+/***/ "./src/components/cardProfile/index.js":
+/*!*********************************************!*\
+  !*** ./src/components/cardProfile/index.js ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"gettingDataFromApi\": () => (/* binding */ gettingDataFromApi)\n/* harmony export */ });\n/* harmony import */ var _imageProfile_imageProfile__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../imageProfile/imageProfile */ \"./src/components/imageProfile/imageProfile.js\");\n\nasync function gettingDataFromApi() {\n  (0,_imageProfile_imageProfile__WEBPACK_IMPORTED_MODULE_0__.imageProfile)();\n}\n\n//# sourceURL=webpack://desafioqconcursos/./src/components/cardProfile/cardProfile.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"cardProfile\": () => (/* binding */ cardProfile)\n/* harmony export */ });\n/* harmony import */ var _profileData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../profileData */ \"./src/components/profileData/index.js\");\n/* harmony import */ var _listRepo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../listRepo */ \"./src/components/listRepo/index.js\");\n/* harmony import */ var _listFavorite__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../listFavorite */ \"./src/components/listFavorite/index.js\");\n\n\n\nfunction cardProfile() {\n  (0,_profileData__WEBPACK_IMPORTED_MODULE_0__.profileData)();\n  (0,_listRepo__WEBPACK_IMPORTED_MODULE_1__.listRepo)();\n  (0,_listFavorite__WEBPACK_IMPORTED_MODULE_2__.listFavorite)();\n}\n\n//# sourceURL=webpack://desafioqconcursos/./src/components/cardProfile/index.js?");
+
+/***/ }),
+
+/***/ "./src/components/followersAndFollowing/followersAndFollowing.js":
+/*!***********************************************************************!*\
+  !*** ./src/components/followersAndFollowing/followersAndFollowing.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"followersAndFolowing\": () => (/* binding */ followersAndFolowing)\n/* harmony export */ });\nconst numberRepository = document.querySelector(\".repo\");\nconst numberFollower = document.querySelector(\".follower\");\nconst numberFollowing = document.querySelector(\".following\");\nasync function followersAndFolowing(repository, follower, following) {\n  numberRepository.innerText = repository;\n  numberFollower.innerText = follower;\n  numberFollowing.innerText = following;\n}\n\n//# sourceURL=webpack://desafioqconcursos/./src/components/followersAndFollowing/followersAndFollowing.js?");
 
 /***/ }),
 
@@ -323,7 +334,40 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"imageProfile\": () => (/* binding */ imageProfile)\n/* harmony export */ });\n/* harmony import */ var _services_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/api */ \"./src/components/services/api.js\");\n\nconst image = document.querySelector(\".image-profile\");\nasync function imageProfile() {\n  const data = await (0,_services_api__WEBPACK_IMPORTED_MODULE_0__.consumingApi)();\n  image.src = await data.avatar_url;\n}\n\n//# sourceURL=webpack://desafioqconcursos/./src/components/imageProfile/imageProfile.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"imageProfile\": () => (/* binding */ imageProfile)\n/* harmony export */ });\nconst image = document.querySelector(\".image-profile\");\nasync function imageProfile(adressImg) {\n  return image.src = adressImg;\n}\n\n//# sourceURL=webpack://desafioqconcursos/./src/components/imageProfile/imageProfile.js?");
+
+/***/ }),
+
+/***/ "./src/components/listFavorite/index.js":
+/*!**********************************************!*\
+  !*** ./src/components/listFavorite/index.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"listFavorite\": () => (/* binding */ listFavorite)\n/* harmony export */ });\n/* harmony import */ var _services_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/api */ \"./src/components/services/api.js\");\n\nasync function listFavorite() {\n  const favoriteAdress = \"starred\";\n  const favorites = await (0,_services_api__WEBPACK_IMPORTED_MODULE_0__.consumeApiPaths)(favoriteAdress);\n  const containerFavorite = document.querySelector(\".favorite\");\n  containerFavorite.addEventListener(\"click\", () => {\n    favorites.map(res => {\n      const listFavorite = document.querySelector(\".list-repo\");\n      listFavorite.style.display = \"flex\";\n      listFavorite.style.flexDirection = \"column\";\n      listFavorite.style.alignItems = \"center\";\n      listFavorite.style.justifyContent = \"space-between\";\n      listFavorite.style.height = \"400px\";\n      const span = document.createElement(\"span\");\n      span.style.border = \"1px solid rgb(19, 197, 182)\";\n      span.style.fontFamily = \"roboto-bold-italic\";\n      span.style.color = \"white\";\n      span.style.backgroundColor = \"rgba(19, 197, 182, 0.404)\";\n      span.style.width = \"200px\";\n      span.style.textAlign = \"center\";\n      listFavorite.appendChild(span);\n      span.innerText = res.name;\n    });\n  });\n}\n\n//# sourceURL=webpack://desafioqconcursos/./src/components/listFavorite/index.js?");
+
+/***/ }),
+
+/***/ "./src/components/listRepo/index.js":
+/*!******************************************!*\
+  !*** ./src/components/listRepo/index.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"listRepo\": () => (/* binding */ listRepo)\n/* harmony export */ });\n/* harmony import */ var _services_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/api */ \"./src/components/services/api.js\");\n\nasync function listRepo() {\n  const repositoryAddress = \"repos\";\n  const apiRepositoryData = await (0,_services_api__WEBPACK_IMPORTED_MODULE_0__.consumeApiPaths)(repositoryAddress);\n  const repository = document.querySelector(\".repository\");\n  repository.addEventListener(\"click\", event => {\n    apiRepositoryData.map(res => {\n      const list = document.querySelector(\".list-repo\");\n      list.style.display = \"flex\";\n      list.style.flexDirection = \"column\";\n      list.style.alignItems = \"center\";\n      list.style.justifyContent = \"space-between\";\n      list.style.height = \"400px\";\n      const span = document.createElement(\"span\");\n      span.style.border = \"1px solid rgb(19, 197, 182)\";\n      span.style.fontFamily = \"roboto-bold-italic\";\n      span.style.color = \"white\";\n      span.style.backgroundColor = \"rgba(19, 197, 182, 0.404)\";\n      span.style.width = \"200px\";\n      span.style.textAlign = \"center\";\n      list.appendChild(span);\n      span.innerText = res.name;\n    });\n  });\n}\n\n//# sourceURL=webpack://desafioqconcursos/./src/components/listRepo/index.js?");
+
+/***/ }),
+
+/***/ "./src/components/profileData/index.js":
+/*!*********************************************!*\
+  !*** ./src/components/profileData/index.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"profileData\": () => (/* binding */ profileData)\n/* harmony export */ });\n/* harmony import */ var _services_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/api */ \"./src/components/services/api.js\");\n/* harmony import */ var _imageProfile_imageProfile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../imageProfile/imageProfile */ \"./src/components/imageProfile/imageProfile.js\");\n/* harmony import */ var _followersAndFollowing_followersAndFollowing__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../followersAndFollowing/followersAndFollowing */ \"./src/components/followersAndFollowing/followersAndFollowing.js\");\n\n\n\nasync function profileData() {\n  const apiProfileData = await (0,_services_api__WEBPACK_IMPORTED_MODULE_0__.consumingApi)();\n  (0,_imageProfile_imageProfile__WEBPACK_IMPORTED_MODULE_1__.imageProfile)(apiProfileData.avatar_url);\n  (0,_followersAndFollowing_followersAndFollowing__WEBPACK_IMPORTED_MODULE_2__.followersAndFolowing)(apiProfileData.public_repos, apiProfileData.followers, apiProfileData.following);\n}\n\n//# sourceURL=webpack://desafioqconcursos/./src/components/profileData/index.js?");
 
 /***/ }),
 
@@ -334,7 +378,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"consumingApi\": () => (/* binding */ consumingApi)\n/* harmony export */ });\nasync function consumingApi() {\n  try {\n    const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n\n    const request = await axios.get(\"https://api.github.com/users/yagovaluchedevs\");\n    const response = await request;\n    return response.data;\n  } catch {\n    return alert(\"Erro ao consumir a api !!\");\n  }\n}\n\n//# sourceURL=webpack://desafioqconcursos/./src/components/services/api.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"consumingApi\": () => (/* binding */ consumingApi),\n/* harmony export */   \"consumeApiPaths\": () => (/* binding */ consumeApiPaths)\n/* harmony export */ });\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n\nasync function consumingApi() {\n  try {\n    const request = await axios.get(\"https://api.github.com/users/yagovaluchedevs\");\n    const response = await request;\n    return response.data;\n  } catch {\n    return alert(\"Erro ao consumir a api !!\");\n  }\n}\nasync function consumeApiPaths(path) {\n  try {\n    const requestPaths = await axios.get(`https://api.github.com/users/yagovaluchedevs/${path}`);\n    const responsePaths = await requestPaths;\n    return responsePaths.data;\n  } catch {\n    return alert(\"Erro ao consumir a api de repositórios\");\n  }\n}\n\n//# sourceURL=webpack://desafioqconcursos/./src/components/services/api.js?");
 
 /***/ }),
 
@@ -345,7 +389,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_cardProfile_cardProfile__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/cardProfile/cardProfile */ \"./src/components/cardProfile/cardProfile.js\");\n\n(0,_components_cardProfile_cardProfile__WEBPACK_IMPORTED_MODULE_0__.gettingDataFromApi)();\n\n//# sourceURL=webpack://desafioqconcursos/./src/pages/desafio/desafio.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_cardProfile__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/cardProfile */ \"./src/components/cardProfile/index.js\");\n\n(0,_components_cardProfile__WEBPACK_IMPORTED_MODULE_0__.cardProfile)();\n\n//# sourceURL=webpack://desafioqconcursos/./src/pages/desafio/desafio.js?");
 
 /***/ })
 

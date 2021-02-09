@@ -1,6 +1,7 @@
+const axios = require("axios");
+
 export async function consumingApi() {
   try {
-    const axios = require("axios");
     const request = await axios.get(
       "https://api.github.com/users/yagovaluchedevs"
     );
@@ -8,5 +9,17 @@ export async function consumingApi() {
     return response.data;
   } catch {
     return alert("Erro ao consumir a api !!");
+  }
+}
+
+export async function consumeApiPaths(path) {
+  try {
+    const requestPaths = await axios.get(
+      `https://api.github.com/users/yagovaluchedevs/${path}`
+    );
+    const responsePaths = await requestPaths;
+    return responsePaths.data;
+  } catch {
+    return alert("Erro ao consumir a api de repositórios");
   }
 }
