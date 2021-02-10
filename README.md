@@ -6,9 +6,9 @@ O desafio consiste em uma aplicação que  retorne 1 perfil do gihub, exibindo a
 
 # Dev Dependências 
 
-1- @babel/core
-2- @babel/polyfill
-*@babel/preset-env
+*babel/core
+*babel/polyfill
+*babel/preset-env
 *babel-loader
 *css-loader
 *file-loader
