@@ -6,15 +6,26 @@ export async function listRepo() {
 
   const repository = document.querySelector(".repository");
 
-  repository.addEventListener("click", (event) => {
-    apiRepositoryData.map((res) => {
-      const list = document.querySelector(".list-repo");
+  repository.addEventListener("click", () => {
+    const list = document.querySelector(".list-repo");
+    list.innerText = "";
 
+    apiRepositoryData.map((res) => {
       list.style.display = "flex";
       list.style.flexDirection = "column";
       list.style.alignItems = "center";
       list.style.justifyContent = "space-between";
       list.style.height = "400px";
+
+      function positionFlexList(x) {
+        if (x.matches) {
+          list.style.height = "770px ";
+          list.style.justifyContent = "center ";
+          list.style.alignItems = "center ";
+        }
+      }
+      const x = window.matchMedia("(max-width: 700px)");
+      positionFlexList(x);
 
       const span = document.createElement("span");
 

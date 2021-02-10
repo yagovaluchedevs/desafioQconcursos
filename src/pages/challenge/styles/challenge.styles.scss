@@ -1,10 +1,14 @@
 @import "../../../components/styles/reset.styles.scss";
-section {
+.content-card {
+  margin-top: 200px;
   width: 100%;
   height: 200px;
   color: rgb(12, 12, 12);
   display: $screen-flexible;
   justify-content: $position-center;
+  @media screen and (max-width: 700px) {
+    margin-top: 50px;
+  }
   .container-profile {
     height: 100%;
     display: $screen-flexible;
@@ -83,6 +87,11 @@ section {
         background-color: $color-hover;
         cursor: $cursor-hover;
       }
+    }
+  }
+  .list-repo {
+    @media screen and( max-width: 800px) {
+      display: none;
     }
   }
 }

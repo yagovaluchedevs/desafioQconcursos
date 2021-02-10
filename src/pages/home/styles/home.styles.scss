@@ -1,6 +1,6 @@
 @import "../../../components/styles/reset.styles.scss";
 
-body {
+.home {
   background: url("../../../assets/images/background-page3.jpg") no-repeat;
   background-size: cover;
   color: white;
@@ -30,6 +30,7 @@ body {
       @media Screen and (min-width: 540px) and (max-width: 540px) {
         justify-content: $position-center;
       }
+
       h1:hover {
         color: $color-hover;
         cursor: $cursor-hover;
@@ -118,6 +119,7 @@ body {
       h2 {
         font-family: roboto-semi-bold-italic;
         text-align: $position-center;
+        color: white;
       }
       h2 {
         font-size: 30px;

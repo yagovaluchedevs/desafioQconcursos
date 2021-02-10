@@ -1,6 +1,6 @@
 import { consumingApi } from "../services/api";
-import { imageProfile } from "../imageProfile/imageProfile";
-import { followersAndFolowing } from "../followersAndFollowing/followersAndFollowing";
+import { imageProfile } from "../imageProfile";
+import { followersAndFolowing } from "../followersAndFollowing";
 
 export async function profileData() {
   const apiProfileData = await consumingApi();
