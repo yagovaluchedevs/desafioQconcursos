@@ -6,15 +6,15 @@ O desafio consiste em uma aplicação que  retorne 1 perfil do gihub, exibindo a
 
 # Dev Dependências 
 
-*babel/core
-*babel/polyfill
-*babel/preset-env
-*babel-loader
-*css-loader
-*file-loader
-*html-webpack-plugin
-*style-loader
-*ttf-loader
-*url-loader
-*webpack
-*webpack-cli
+* babel/core
+* babel/polyfill
+* babel/preset-env
+* babel-loader
+* css-loader
+* file-loader
+* html-webpack-plugin
+* style-loader
+* ttf-loader
+* url-loader
+* webpack
+* webpack-cli
