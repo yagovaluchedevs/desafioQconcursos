@@ -1,4 +1,4 @@
-import { consumingApi } from "../services/api";
+import { consumingApi } from "../../services/api";
 import { imageProfile } from "../imageProfile";
 import { followersAndFolowing } from "../followersAndFollowing";
 

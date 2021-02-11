@@ -1,5 +1,6 @@
-@import "../../../components/styles/reset.styles.scss";
-.about-me {
+@import "../../styles/global.styles.scss";
+
+#about-me {
   display: $screen-flexible;
   flex-direction: column;
   align-items: $position-center;
@@ -13,7 +14,7 @@
     margin: 10px 0 15px 0;
   }
   .content-block {
-    width: 600px;
+    width: 700px;
     display: $screen-flexible;
     align-items: $position-center;
     @media Screen and (max-width: 600px) {

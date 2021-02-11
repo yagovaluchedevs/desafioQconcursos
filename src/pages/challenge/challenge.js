@@ -1,9 +1,8 @@
-import { cardProfile } from "../../components/cardProfile";
-import "./styles/challenge.styles.css";
+import "./challenge.styles.scss";
 
 export default function Challenge() {
   return `
-  <section  class="content-card">
+  <section  id="content-card">
       <div class="container-profile">
         <div class="profile">
           <img class="image-profile" alt="imagem perfil do repositório" />

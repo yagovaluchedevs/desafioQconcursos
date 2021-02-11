@@ -1,4 +1,4 @@
-import { consumeApiPaths } from "../services/api";
+import { consumeApiPaths } from "../../services/api";
 
 export async function listRepo() {
   const repositoryAddress = "repos";

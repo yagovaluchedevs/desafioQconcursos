@@ -1,10 +1,10 @@
-import "./styles/sobre.styles.css";
 import eu from "../../assets/images/yago.jpg";
 import estartandoDevs from "../../assets/images/estartando-devs.jpg";
+import "./sobre.styles.scss";
 
 export default function Sobre() {
   return `
-    <section class="about-me">
+    <section id="about-me">
         <h1>Sobre Mim</h1>
         <div class="content-block">
         <div>

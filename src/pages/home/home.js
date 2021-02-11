@@ -1,6 +1,6 @@
-import "../home/styles/home.styles.css";
 import gitHubImage from "../../assets/images/icons8-github.svg";
 import linkedinImage from "../../assets/images/icons8-linkedin.svg";
+import "./home.styles.scss";
 
 export default function Home() {
   return `
@@ -11,9 +11,9 @@ export default function Home() {
       </div>
       <nav class="container-menu">
         <ul>
-          <a><li id="home">Home</li></a>
-          <a><li id="sobre">Sobre</li></a>
-          <a><li id="challenge">Desafio</li></a>
+          <a><li >Home</li></a>
+          <a href="#about-me"><li>Sobre</li></a>
+          <a href="#content-card" ><li>Desafio</li></a>
         </ul>
       </nav>
     </header>
