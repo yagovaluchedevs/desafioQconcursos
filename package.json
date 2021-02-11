@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "desafioqconcursos",
   "scripts": {
-    "build": " webpack --config config/webpack.config.js --watch"
+    "start": " webpack --config config/webpack.config.js --watch"
   },
   "repository": {
     "type": "git",

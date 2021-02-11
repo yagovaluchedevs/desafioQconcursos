@@ -1,5 +1,5 @@
 import "./styles/sobre.styles.css";
-import eu from "../../assets/images/eu.jpg";
+import eu from "../../assets/images/yago.jpg";
 import estartandoDevs from "../../assets/images/estartando-devs.jpg";
 
 export default function Sobre() {
