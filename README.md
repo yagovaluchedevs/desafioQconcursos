@@ -18,3 +18,4 @@ O desafio consiste em uma aplicação que  retorne 1 perfil do gihub, exibindo a
 * url-loader
 * webpack
 * webpack-cli
+* axios 
