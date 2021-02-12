@@ -1,6 +1,7 @@
 # Aplicação
 
-Essa aplicação foi proposta pela empresa Qconcursos que tem como objetivo um teste de habilidade.
+Essa aplicação foi proposta pela empresa Qconcursos que tem como objetivo um teste de habilidade. Um dos requisitos do desafio é que não pode haver o uso de libs/frameworks 
+que poderiam facilitar o desenvolvimento. Por isso o projeto foi desenvolvido com JS puro.
 
 # Introdução do Desafio
 
